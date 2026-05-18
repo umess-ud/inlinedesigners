@@ -68,9 +68,10 @@ section{padding:5rem 2rem}
 #about{background:var(--wh)}
 .ag{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
 @media(max-width:768px){.ag{grid-template-columns:1fr}}
-.aib{background:var(--navy);border-radius:16px;height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
+.aib{background:var(--navy);border-radius:16px;height:auto;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;position:relative;overflow:hidden}
 .aib::before{content:'';position:absolute;width:300px;height:300px;border-radius:50%;border:1px solid rgba(184,132,26,.2);top:-60px;right:-60px}
 .aib i{font-size:4rem;color:rgba(255,255,255,.2)}
+.aib img{width:100%;height:100%;object-fit:cover;border-radius:16px}
 .aib p{color:rgba(255,255,255,.4);font-size:.8rem}
 .abadge{display:inline-block;background:rgba(184,132,26,.1);color:var(--gold);border:1px solid rgba(184,132,26,.3);border-radius:20px;font-size:.7rem;padding:.3rem .9rem;margin-bottom:1rem;letter-spacing:1px;text-transform:uppercase}
 .atxt{color:var(--muted);font-size:.95rem;line-height:1.8;margin-bottom:1.25rem}
