@@ -19,7 +19,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(15,39,68,0.9
 .nav-logo img{height:80px;width:auto;object-fit:contain}
 .nav-logo-text{display:flex;flex-direction:column;line-height:1.2}
 .nav-logo-company{font-family:'Cormorant Garamond',serif;color:#fff;font-size:1rem;font-weight:700;letter-spacing:.3px}
-.nav-logo-company span{color:var(--gl)}
+.nav-logo-company span{color:#fff}
 .nav-logo-person{font-size:.65rem;color:rgba(255,255,255,.5);letter-spacing:.5px}
 .nl{display:flex;gap:1.5rem;list-style:none}
 .nl a{color:rgba(255,255,255,.75);text-decoration:none;font-size:.75rem;letter-spacing:1px;text-transform:uppercase;transition:.2s}
@@ -38,7 +38,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(15,39,68,0.9
 .hero-logo-wrap img{height:250px;width:auto;object-fit:contain;filter:brightness(1.1)}
 .htag{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gl);margin-bottom:.6rem;font-weight:500}
 .hcompany{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);color:#fff;line-height:1.1;font-weight:700;margin-bottom:.3rem}
-.hcompany span{color:var(--gl)}
+.hcompany span{color:#fff}
 .hperson{font-size:.95rem;color:rgba(255,255,255,.55);margin-bottom:2rem;font-weight:300}
 .hperson strong{color:rgba(255,255,255,.8);font-weight:500}
 .hstats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:2rem}
@@ -245,7 +245,7 @@ footer{background:#08192e;padding:1.75rem 2rem;text-align:center}
     <img src="Inline-logo.png" alt="Inline Designers and Builders Logo"/>
     <div class="nav-logo-text">
       <div class="nav-logo-company">Inline <span>Designers &amp; Builders</span></div>
-      <div class="nav-logo-person">Umesh Dangol &mdash; NEC 31664 'A'</div>
+      <div class="nav-logo-person">Er. Umesh Dangol &mdash; NEC 31664 'A'</div>
     </div>
   </a>
   <button class="hbg" onclick="document.querySelector('.nl').classList.toggle('open')" aria-label="Menu">
@@ -268,9 +268,10 @@ footer{background:#08192e;padding:1.75rem 2rem;text-align:center}
       <div class="hero-logo-wrap">
         <img src="Inline-logo.png" alt="Inline Designers and Builders"/>
       </div>
-      <p class="htag">Civil &amp; Structural Engineering &middot; Nepal</p>
+      <p class="htag">Civil &amp; Structural Engineering</p>
+      <p class="htag">Design &amp; Construction &middot; Nepal</p>
       <h1 class="hcompany">Inline <span>Designers</span><br/>&amp; Builders</h1>
-      <p class="hperson">Led by <strong>Umesh Dangol</strong> &middot; NBC 2025 &middot; IS Codes &middot; ETABS &middot; AutoCAD</p>
+      <p class="hperson">Led by <strong>Er. Umesh Dangol</p>
       <div class="hstats">
         <div class="sbox"><div class="snum" id="pc">0</div><div class="slbl">Projects</div></div>
         <div class="sbox"><div class="snum">4.9<span style="font-size:1rem">&#9733;</span></div><div class="slbl">Rating</div></div>
@@ -283,11 +284,11 @@ footer{background:#08192e;padding:1.75rem 2rem;text-align:center}
     </div>
     <div class="hcard">
       <h3>Professional Credentials</h3>
-      <div class="cr"><i class="ti ti-certificate"></i>NEC Registered &mdash; Umesh Dangol No. 31664 'A'</div>
+      <div class="cr"><i class="ti ti-certificate"></i>NEC Registered &mdash; Er. Umesh Dangol No. 31664 'A'</div>
       <div class="cr"><i class="ti ti-building"></i>Structural Design per NBC 2025</div>
       <div class="cr"><i class="ti ti-ruler-2"></i>AutoCAD Drafting &amp; Planning</div>
       <div class="cr"><i class="ti ti-chart-dots-3"></i>ETABS Structural Analysis</div>
-      <div class="cr"><i class="ti ti-seismograph"></i>Seismic Zone V Design Expertise</div>
+      <div class="cr"><i class="ti ti-seismograph"></i>Site Supervision</div>
       <div class="cr"><i class="ti ti-map-pin"></i>Tokha-03, Kathmandu, Nepal</div>
     </div>
   </div>
@@ -307,7 +308,7 @@ footer{background:#08192e;padding:1.75rem 2rem;text-align:center}
         <div class="about-person-box">
           <i class="ti ti-user-circle"></i>
           <div>
-            <strong>Umesh Dangol &mdash; Principal Engineer</strong>
+            <strong>Er. Umesh Dangol &mdash; Principal Engineer</strong>
             <span>Civil &amp; Structural Engineer &middot; Tokha-03, Kathmandu</span>
           </div>
         </div>
@@ -335,6 +336,7 @@ footer{background:#08192e;padding:1.75rem 2rem;text-align:center}
       <button class="fb" onclick="filterP('Residential',this)">Residential</button>
       <button class="fb" onclick="filterP('Commercial',this)">Commercial</button>
       <button class="fb" onclick="filterP('Infrastructure',this)">Infrastructure</button>
+       <button class="fb" onclick="filterP('Supervision',this)">Supervision</button>
       <button class="fb" onclick="filterP('Retrofitting',this)">Retrofitting</button>
     </div>
     <div class="pgrid" id="pgrid"></div>
@@ -490,8 +492,8 @@ footer{background:#08192e;padding:1.75rem 2rem;text-align:center}
 // ================================================================
 var PROJ = [
   {
-    id:1, title:"Sample: 3-Storey RCC Residence", type:"Residential",
-    location:"Tokha, Kathmandu", status:"Completed", year:"2024", client:"Private Client",
+    id:1, title:"Suku Narayan Shrestha: 3.5-Storey RCC Residence", type:"Residential",
+    location:"Tokha, Kathmandu", status:"Completed", year:"2025", client:"Private Client",
     description:"NBC 2025 seismic design for a 3-storey reinforced concrete residence. Full ETABS structural analysis performed. AutoCAD architectural and structural drawings prepared and submitted to Kathmandu Metropolitan City for building permit approval.",
     images:[], drawings:[], nbc:true, etabs:true, rating:5, reviews:[]
   },
