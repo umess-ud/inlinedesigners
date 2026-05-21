@@ -594,7 +594,7 @@ function openM(id){
   var ph=document.getElementById('mphoto');
   if(p.images&&p.images.length>1){
     ph.innerHTML='<div class="msec">Site Photos</div><div class="photo-grid">'
-      +p.images.map(function(src,i){return '<img src="'+src+'" alt="Photo '+(i+1)+'" loading="lazy"/>';}).join('')
+      +p.images.map(function(src,i){return '<img src="'+src+'" alt="Photo '+(i+1)+'" loading="lazy" onclick="viewDr(\''+src+'\',\'Photo '+(i+1)+'\')" style="cursor:pointer"/>';}).join('')
       +'</div>';
   } else { ph.innerHTML=''; }
 
