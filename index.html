@@ -499,31 +499,31 @@ var PROJ = [
     images:["suku-narayan-frong.png"], drawings:["suku-narayan-plan.png"], nbc:true, etabs:true, rating:5, reviews:[]
   },
    {
-    id:1, title:"Chandra Dangol: RCC Residence", type:"Residential",
+    id:2, title:"Chandra Dangol: RCC Residence", type:"Residential",
     location:"Budhanilkantha, Kathmandu", status:"Completed", year:"2026", client:"Private Client",
     description:"NBC 2025 seismic design for a 2.5-storey reinforced concrete residence. Full ETABS structural analysis performed. AutoCAD architectural and structural drawings prepared and submitted to Tokha Metropolitan City for building permit approval.",
     images:["suku-narayan-frong.png"], drawings:["suku-narayan-plan.png"], nbc:true, etabs:true, rating:5, reviews:[]
   },
   {
-    id:2, title:"Royal Palace: 2-Storey Banquet - Classical Design", type:"Supervision",
+    id:3, title:"Royal Palace: 2-Storey Banquet - Classical Design", type:"Supervision",
     location:"Kathmandu District", status:"Completed", year:"2025", client:"Private Developer",
     description:"Construction supervision and execution management for Royal Palace Banquet. Supervised RCC framework, masonry, and architectural finishing works; coordinated with contractors, sub-contractors, and technical teams; monitored site progress and quality control in accordance with approved drawings, specifications, and construction standards.",
     images:["royal-palace-main.jpeg", "royal-palace-interior.jpeg", "royal-palace-top.jpeg", "royal-palace-terrace.jpeg"], drawings:[], nbc:true, etabs:true, rating:4, reviews:[]
   },
    {
-    id:2, title:"Heaven Banquet: 2-Storey Banquet - Classical Design", type:"Supervision",
+    id:4, title:"Heaven Banquet: 2-Storey Banquet - Classical Design", type:"Supervision",
     location:"Kathmandu District", status:"Completed", year:"2025", client:"Private Developer",
     description:"Construction supervision and execution management for Heaven Banquet. Supervised Steel framework, masonry, and architectural finishing works; coordinated with contractors, sub-contractors, and technical teams; monitored site progress and quality control in accordance with approved drawings, specifications, and construction standards.",
     images:["heaven-design.jpeg", "heaven-main.jpg", "heaven-lobby.jpeg", "heaven-bar.jpeg"], drawings:[], nbc:true, etabs:true, rating:4, reviews:[]
   },
   {
-    id:3, title:"Sample: Rural Road and Drainage", type:"Infrastructure",
+    id:5, title:"Sample: Rural Road and Drainage", type:"Infrastructure",
     location:"Nuwakot District", status:"Completed", year:"2023", client:"Local Government",
     description:"Road alignment, cross drainage design, and site supervision under DoLIDAR guidelines. Includes culvert design and slope stabilisation.",
     images:[], drawings:[], nbc:false, etabs:false, rating:5, reviews:[]
   },
   {
-    id:4, title:"Sample: Earthquake Retrofitting", type:"Retrofitting",
+    id:6, title:"Sample: Earthquake Retrofitting", type:"Retrofitting",
     location:"Sindhupalchok", status:"Completed", year:"2023", client:"I/NGO Project",
     description:"Post-earthquake structural assessment and retrofitting design for 2015 earthquake-affected building. Included crack mapping, load analysis, and ferro-cement retrofitting.",
     images:[], drawings:[], nbc:true, etabs:true, rating:5, reviews:[]
@@ -594,7 +594,7 @@ function openM(id){
   var ph=document.getElementById('mphoto');
   if(p.images&&p.images.length>1){
     ph.innerHTML='<div class="msec">Site Photos</div><div class="photo-grid">'
-      +p.images.map(function(src,i){return '<img src="'+src+'" alt="Photo '+(i+1)+'" loading="lazy" onclick="viewDr(\''+src+'\',\'Photo '+(i+1)+'\')" style="cursor:pointer"/>';}).join('')
+      +p.images.map(function(src,i){return '<img src="'+src+'" alt="Photo '+(i+1)+'" loading="lazy" onclick="viewDr(\''+src+'\',\'Photo '+(i+1)+'\')" style="cursor:pointer;border-radius:8px"/>';}).join('')
       +'</div>';
   } else { ph.innerHTML=''; }
 
